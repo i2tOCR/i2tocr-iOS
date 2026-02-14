@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="i2tocr" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="fe9-7B-vIA" id="Rwn-pc-LyR"/>
+                <outlet property="showGridView" destination="Hn4-ze-gOK" id="jH8-o9-gr4"/>
+                <outlet property="showListView" destination="o5S-qh-0np" id="jcb-Wb-DhW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fe9-7B-vIA">
+                    <rect key="frame" x="0.0" y="166" width="393" height="686"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IYb-yM-kdk">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5S-qh-0np">
+                    <rect key="frame" x="341" y="122" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="WKG-dU-LdT"/>
+                        <constraint firstAttribute="width" constant="40" id="zQz-IM-pPR"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="showListView:" destination="-1" eventType="touchUpInside" id="CKz-mC-LJy"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hn4-ze-gOK">
+                    <rect key="frame" x="293" y="122" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0N3-mt-Hw8"/>
+                        <constraint firstAttribute="width" constant="40" id="IUc-wK-n4D"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="showGridView:" destination="-1" eventType="touchUpInside" id="mux-ro-oIf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="o5S-qh-0np" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="0OS-V4-8YQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o5S-qh-0np" secondAttribute="trailing" constant="12" id="1iU-6Z-92T"/>
+                <constraint firstItem="fe9-7B-vIA" firstAttribute="top" secondItem="o5S-qh-0np" secondAttribute="bottom" constant="4" id="1wz-t2-AbW"/>
+                <constraint firstItem="o5S-qh-0np" firstAttribute="leading" secondItem="Hn4-ze-gOK" secondAttribute="trailing" constant="8" id="C8c-Ed-vJy"/>
+                <constraint firstAttribute="bottom" secondItem="fe9-7B-vIA" secondAttribute="bottom" id="HrK-i1-mqq"/>
+                <constraint firstItem="fe9-7B-vIA" firstAttribute="top" secondItem="Hn4-ze-gOK" secondAttribute="bottom" constant="4" id="RvY-0e-TtL"/>
+                <constraint firstItem="fe9-7B-vIA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Umh-gs-Q86"/>
+                <constraint firstAttribute="trailing" secondItem="o5S-qh-0np" secondAttribute="trailing" constant="12" id="edv-ft-ru8"/>
+                <constraint firstItem="Hn4-ze-gOK" firstAttribute="centerY" secondItem="o5S-qh-0np" secondAttribute="centerY" id="kyb-06-04Z"/>
+                <constraint firstItem="Hn4-ze-gOK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="ol3-iZ-Eb8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fe9-7B-vIA" secondAttribute="trailing" id="qnM-sf-wTQ"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+</document>

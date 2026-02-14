@@ -1,0 +1,10 @@
+.DS_Store
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcassets/
+*.xcassets/**/
+*.xccheckout
+*.xcscmblueprint
+*.xcdatamodeld/
+*.xcdatamodeld/**/
+*.xcode/
