@@ -1,6 +1,0 @@
-framework module Pods_i2tocr_i2tocrUITests {
-  umbrella header "Pods-i2tocr-i2tocrUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
