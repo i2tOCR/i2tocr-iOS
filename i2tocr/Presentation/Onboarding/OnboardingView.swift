@@ -115,6 +115,7 @@ struct OnboardingView: View {
                     }
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
+                .environment(\.layoutDirection, .leftToRight)
                 .animation(.spring(duration: 0.5), value: viewModel.currentPage)
 
                 // Bottom controls
@@ -131,6 +132,7 @@ struct OnboardingView: View {
                                 .animation(.spring(duration: 0.4), value: viewModel.currentPage)
                         }
                     }
+                    .environment(\.layoutDirection, .leftToRight)
 
                     // Action button
                     Button {
@@ -142,7 +144,7 @@ struct OnboardingView: View {
                     } label: {
                         HStack(spacing: 10) {
                             Text(viewModel.isLastPage ? "Get Started" : "Next")
-                            Image(systemName: viewModel.isLastPage ? "arrow.right.circle.fill" : "chevron.left")
+                            Image(systemName: viewModel.isLastPage ? "arrow.right.circle.fill" : "chevron.right")
                         }
                     }
                     .buttonStyle(PrimaryButtonStyle())

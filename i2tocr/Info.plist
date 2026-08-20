@@ -2,32 +2,64 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <!-- Camera Usage -->
+    <!-- ========== APP ICON CONFIGURATION ========== -->
+    <key>CFBundleIconName</key>
+    <string>AppIcon</string>
+    
+    <key>CFBundleIcons</key>
+    <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>CFBundleIconName</key>
+            <string>AppIcon</string>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>AppIcon</string>
+            </array>
+        </dict>
+    </dict>
+    
+    <key>CFBundleIcons~ipad</key>
+    <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>CFBundleIconName</key>
+            <string>AppIcon</string>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>AppIcon</string>
+            </array>
+        </dict>
+    </dict>
+    
+    <!-- ========== CAMERA USAGE ========== -->
     <key>NSCameraUsageDescription</key>
     <string>This app needs camera access to capture images for text extraction</string>
     
-    <!-- Photo Library Usage -->
+    <!-- ========== PHOTO LIBRARY USAGE ========== -->
     <key>NSPhotoLibraryUsageDescription</key>
     <string>This app needs photo library access to select images for text extraction</string>
     
-    <!-- Face ID Usage - NON-EMPTY STRING -->
+    <!-- ========== FACE ID USAGE ========== -->
     <key>NSFaceIDUsageDescription</key>
     <string>This app uses Face ID to securely authenticate your identity and protect your OCR documents</string>
     
-    <!-- Documents Folder Usage - NON-EMPTY STRING -->
+    <!-- ========== DOCUMENTS FOLDER USAGE ========== -->
     <key>NSDocumentsFolderUsageDescription</key>
     <string>This app needs access to Documents folder to import images for OCR text extraction</string>
     
-    <!-- Support Opening Documents In Place -->
+    <!-- ========== SUPPORT OPENING DOCUMENTS IN PLACE ========== -->
     <key>LSSupportsOpeningDocumentsInPlace</key>
     <true/>
     
-    <!-- Document Types -->
+    <!-- ========== DOCUMENT TYPES ========== -->
     <key>CFBundleDocumentTypes</key>
     <array>
         <dict>
             <key>CFBundleTypeName</key>
             <string>Image Files</string>
+            <key>LSHandlerRank</key>
+            <string>Alternate</string>
             <key>LSItemContentTypes</key>
             <array>
                 <string>public.image</string>
@@ -35,7 +67,7 @@
         </dict>
     </array>
     
-    <!-- Scene Manifest -->
+    <!-- ========== SCENE MANIFEST ========== -->
     <key>UIApplicationSceneManifest</key>
     <dict>
         <key>UIApplicationSupportsMultipleScenes</key>
@@ -54,7 +86,7 @@
         </dict>
     </dict>
     
-    <!-- Supported Document Types -->
+    <!-- ========== SUPPORTED DOCUMENT TYPES ========== -->
     <key>UTImportedTypeDeclarations</key>
     <array>
         <dict>

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DE42284303764B2001C14F2 /* AppAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DE42283303764B2001C14F2 /* AppAssets.xcassets */; };
 		265F9F292F0A9ECF00513E35 /* MockDocumentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F9F282F0A9ECC00513E35 /* MockDocumentRepository.swift */; };
 		265F9F2B2F0A9EDE00513E35 /* LoadDocumentsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F9F2A2F0A9EDC00513E35 /* LoadDocumentsUseCaseTests.swift */; };
 		265F9F2D2F0A9EF500513E35 /* CreateDocumentFromOCRUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F9F2C2F0A9EF300513E35 /* CreateDocumentFromOCRUseCaseTests.swift */; };
 		265F9F302F0AA8A400513E35 /* HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F9F2E2F0AA81500513E35 /* HomeUITests.swift */; };
-		26ACFD7B2FB5C5B5009CAE8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26ACFD7A2FB5C5B5009CAE8B /* Assets.xcassets */; };
 		26ACFD7E2FB5C5E2009CAE8B /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACFD7D2FB5C5E2009CAE8B /* DI.swift */; };
 		26ACFD802FB5C5E8009CAE8B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACFD7F2FB5C5E7009CAE8B /* Extensions.swift */; };
 		26ACFD822FB5C5EE009CAE8B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACFD812FB5C5EE009CAE8B /* Utils.swift */; };
@@ -56,11 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DE4228230374418001C14F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DE42283303764B2001C14F2 /* AppAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppAssets.xcassets; sourceTree = "<group>"; };
 		265F9F282F0A9ECC00513E35 /* MockDocumentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDocumentRepository.swift; sourceTree = "<group>"; };
 		265F9F2A2F0A9EDC00513E35 /* LoadDocumentsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDocumentsUseCaseTests.swift; sourceTree = "<group>"; };
 		265F9F2C2F0A9EF300513E35 /* CreateDocumentFromOCRUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDocumentFromOCRUseCaseTests.swift; sourceTree = "<group>"; };
 		265F9F2E2F0AA81500513E35 /* HomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITests.swift; sourceTree = "<group>"; };
-		26ACFD7A2FB5C5B5009CAE8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26ACFD7D2FB5C5E2009CAE8B /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		26ACFD7F2FB5C5E7009CAE8B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		26ACFD812FB5C5EE009CAE8B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -283,12 +284,13 @@
 		4DDD621A2C4192BC00F2B079 /* Resoures */ = {
 			isa = PBXGroup;
 			children = (
+				1DE4228230374418001C14F2 /* Assets.xcassets */,
 				26ACFDB62FB5DF26009CAE8B /* RootView.swift */,
 				26ACFDB42FB5DF03009CAE8B /* AppState.swift */,
 				4DA9BF432C41874800C5D1F0 /* AppDelegate.swift */,
 				4DA9BF452C41874800C5D1F0 /* SceneDelegate.swift */,
-				26ACFD7A2FB5C5B5009CAE8B /* Assets.xcassets */,
 				4DA9BF4E2C41874900C5D1F0 /* LaunchScreen.storyboard */,
+				1DE42283303764B2001C14F2 /* AppAssets.xcassets */,
 			);
 			path = Resoures;
 			sourceTree = "<group>";
@@ -394,8 +396,8 @@
 		4DA9BF3E2C41874800C5D1F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				1DE42284303764B2001C14F2 /* AppAssets.xcassets in Resources */,
 				4DA9BF502C41874900C5D1F0 /* Base in Resources */,
-				26ACFD7B2FB5C5B5009CAE8B /* Assets.xcassets in Resources */,
 			);
 		};
 		4DA9BF542C41874900C5D1F0 /* Resources */ = {
@@ -610,7 +612,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = U848A2NDHM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = i2tocr/Info.plist;
@@ -650,7 +652,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = U848A2NDHM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = i2tocr/Info.plist;

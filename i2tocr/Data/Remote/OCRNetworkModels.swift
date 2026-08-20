@@ -7,15 +7,28 @@
 
 import Foundation
 
-struct OCRResult: Decodable, Sendable {
+//struct OCRResult: Decodable, Sendable {
+//    let language: String
+//    let config: String
+//    let text: String
+//}
+//
+//struct ServerResponse: Decodable, Sendable {
+//    let status: String
+//    let data: OCRResult
+//    let detail: String
+//    let task_id: String
+//}
+
+struct OCRResponse: Decodable {
+    let status: String
+    let data: OCRData?
+    let detail: String?
+    let task_id: String?
+}
+
+struct OCRData: Decodable {
     let language: String
     let config: String
     let text: String
-}
-
-struct ServerResponse: Decodable, Sendable {
-    let status: String
-    let data: OCRResult
-    let detail: String
-    let task_id: String
 }

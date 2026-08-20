@@ -10,6 +10,7 @@ import SwiftUI
 struct SideMenuView: View {
     @Binding var isOpen: Bool
     @Binding var ocrMode: OCRMode
+    @State private var showComingSoonAlert = false
 
     var body: some View {
         ZStack(alignment: .trailing) {
@@ -33,6 +34,9 @@ struct SideMenuView: View {
         }
         .animation(.spring(duration: 0.4, bounce: 0.1), value: isOpen)
         .environment(\.layoutDirection, .rightToLeft)
+        .alert("Coming Soon", isPresented: $showComingSoonAlert) {
+            Button("Ok") { }
+        }
     }
 
     private var menuPanel: some View {
@@ -71,8 +75,14 @@ struct SideMenuView: View {
                 ForEach(OCRMode.allCases, id: \.self) { mode in
                     OCRModeRow(
                         mode: mode,
-                        isSelected: ocrMode == mode
+                        isSelected: ocrMode == mode,
+                        isComingSoon: mode == .server
                     ) {
+                        guard mode != .server else {
+                            showComingSoonAlert = true
+                            return
+                        }
+
                         withAnimation(.spring(duration: 0.3)) {
                             ocrMode = mode
                         }
@@ -105,6 +115,7 @@ struct SideMenuView: View {
 struct OCRModeRow: View {
     let mode: OCRMode
     let isSelected: Bool
+    let isComingSoon: Bool
     let action: () -> Void
 
     var body: some View {
@@ -132,7 +143,14 @@ struct OCRModeRow: View {
 
                 Spacer()
 
-                if isSelected {
+                if isComingSoon {
+                    Text("Coming Soon")
+                        .font(TLFont.body(10))
+                        .foregroundStyle(Color.tlTextSecondary)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 4)
+                        .background(Color.tlSurface2, in: Capsule())
+                } else if isSelected {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundStyle(Color.tlPrimary)
                         .font(.system(size: 18))
@@ -140,6 +158,7 @@ struct OCRModeRow: View {
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 10)
+            .opacity(isComingSoon ? 0.55 : 1)
         }
         .buttonStyle(.plain)
     }
